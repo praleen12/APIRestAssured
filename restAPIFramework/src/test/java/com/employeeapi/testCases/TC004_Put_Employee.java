@@ -26,20 +26,18 @@ public class TC004_Put_Employee extends TestBase {
 		requestParam.put("name", empName);
 		requestParam.put("salary", empSalary);
 		requestParam.put("age", empAge);
-		
+
 		httpRequest.header("Content-Type", "application/json");
 		httpRequest.body(requestParam.toJSONString());
 		response = httpRequest.request(Method.PUT, "/update/" + empID);
 		Thread.sleep(5000);
-		
 
 	}
 
 	@Test
 	void checkStatusCode() {
-		int statusCode = response.getStatusCode()
-;
+		int statusCode = response.getStatusCode();
 		Assert.assertEquals(statusCode, 200);
-		
+
 	}
 }

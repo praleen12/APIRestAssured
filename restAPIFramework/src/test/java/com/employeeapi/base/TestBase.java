@@ -11,10 +11,8 @@ public class TestBase {
 	public static Response response;
 	public String empID = "9066";
 
-
 	@BeforeClass
 	public void setup() {
-		
 
 	}
 
